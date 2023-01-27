@@ -20,14 +20,11 @@
         let width = null; // рассчитайте ширину блока и запишите в эту переменную
 
         let sumMargin = margins * (desieredBlockCount - 1);
-        widthBl = screenWidth - sumMargin;
+        let widthAllBloks = screenWidth - sumMargin;
        
-        width = screenWidth / desieredBlockCount;
+        width = widthAllBloks / desieredBlockCount;
         alert(`Ширина блоку ${width} px`);
         
-        console.log(sumMargin);
-        console.log(width);
-        console.log();
     </script>
 </body>
 </html>
