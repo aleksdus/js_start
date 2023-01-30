@@ -20,10 +20,12 @@
         const Pi = 3.1415926535; 
         let r = +prompt("Введите радиус цилиндра");
         let h = +prompt("Введите высоту цилиндра");
-        if (isNaN(r) || isNaN(h)) {
-            throw new Error("all parametrs should be a nummber");  
-        } else 
-        {
+        if (isNaN(r) || r == 0) {
+            alert("радіус повинен бути числом і не дорівнювати нулю"); 
+        } else if (isNaN(h) || h == 0) {
+            alert("вислота повинyf бути числом і не дорівнювати нулю"); 
+        } else {
+        
             V = Pi * r * r * h;
         }
 
