@@ -20,15 +20,23 @@
         const Pi = 3.1415926535; 
         let r = +prompt("Введите радиус цилиндра");
         let h = +prompt("Введите высоту цилиндра");
-        if (isNaN(r) || isNaN(h)) {
-            throw new Error("all parametrs should be a nummber");  
-        } else 
-        {
-            V = Pi * r * r * h;
-        }
+        let validValues = true;
+if (isNaN(r) || r == 0) {
+    alert("Радіус повинен бути чслом і не дорівнювати нулю");
+    validValues = false
+};
+if (isNaN(h) || h == 0) {
+    alert("Висота повинна бути чслом і не дорівнювати нулю");
+    validValues = false;
+};
 
-        // V = Pi * r * r * h;
+if (validValues) {
+
+        V = Pi * r * r * h;
         alert(`Объем цилиндра с высотой ${h} и радиусом ${r} = ${V}`);
+} else {
+    alert("Введені некоректні дані")
+};
     </script>
 </body>
 </html>
