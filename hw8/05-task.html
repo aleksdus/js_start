@@ -33,7 +33,11 @@
         let randomValue = Math.floor(Math.random() * 101);
         console.log(randomValue);
         let myValue = +prompt("Введіть число від 0 до 100");
+        
         for (let i = 0; i <= 100; i++) {
+            if (myValue == "stop") {
+            break;
+        }
             if (randomValue == myValue) {
                 console.log(`Поздоровляю, Ви вгадали число - це ${randomValue} з ${i + 1}-ї спроби`);
                 break;
