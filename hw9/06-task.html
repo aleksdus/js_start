@@ -14,23 +14,29 @@
     </pre>
     <script>
         let values = [10, 20, 4, 6, 11, 9, 125, 1, 8, 0, 3];
+        console.log(values);
         let max = Number.MIN_VALUE;
         let min = Number.MAX_VALUE;
+        let maxElindex;
+        let minElindex;
         for (i = 0; i < values.length; i++) {
             if (min > values[i]) {
-                
                 min = values[i];
-                
+                minElindex = i;
+
             } else {
                 if (max < values[i]) {
-                   
                     max = values[i];
-                    
+                    maxElindex = i;
                 }
             }
         }
+        values[maxElindex] = min;
+        values[minElindex] = max;
+    
         console.log(min);
         console.log(max);
+        console.log(values);
     </script>
 </body>
 

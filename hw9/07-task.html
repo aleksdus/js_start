@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task 7</title>
 </head>
+
 <body>
     <pre>
         Задание:
@@ -12,8 +14,22 @@
         Выведите на экран только те элементы, которые больше этого среднего арифметического значения
     </pre>
     <script>
-        let values = [10, 20, 48, 6, 11, 9, 125, 1, 8, 0, 3, 255, 77, 11, 170, 4, 28 ];
-        
+        let values = [10, 20, 48, 6, 11, 9, 125, 1, 8, 0, 3, 255, 77, 11, 170, 4, 28];
+        let average = 0;
+        let moreThenAverage = "";
+        for (const iterator of values) {
+            average += iterator / values.length
+        };
+        for (const iterator of values) {
+            if (iterator > average) {
+                moreThenAverage += iterator + " ";
+            }
+        }
+         console.log(`Числа більш ніж середнье аріфметічне  - ${moreThenAverage}`);
+
+        console.log(`Середнье аріфметичне масиву - ${average}`);
+
     </script>
 </body>
+
 </html>
