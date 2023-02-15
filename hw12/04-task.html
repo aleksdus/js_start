@@ -19,40 +19,34 @@
         let oddValuesPosition = 0;
         let evenValuesPosition = 0;
 
-        for (let value of values) {
-            if (value % 2 == 0) {
-                evenValues[evenValuesPosition] = value;
-                evenValuesPosition++;
-            }
-            else {
-                oddValues[oddValuesPosition] = value;
-                oddValuesPosition++;
-            }
-        }
-
-        console.log("Нечетные значения");
-        for (let oddVal of oddValues) {
-            console.log(oddVal);
-        }
-
-        console.log("Четные значения");
-        for (let evenVal of evenValues) {
-            console.log(evenVal);
-        }
-
-        // values.forEach(element => {if (element % 2 == 0) {
-        //         evenValues[evenValuesPosition] = element;
+        // for (let value of values) {
+        //     if (value % 2 == 0) {
+        //         evenValues[evenValuesPosition] = value;
         //         evenValuesPosition++;
         //     }
         //     else {
-        //         oddValues[oddValuesPosition] = element;
+        //         oddValues[oddValuesPosition] = value;
         //         oddValuesPosition++;
         //     }
-            
-        // });
+        // }
 
-        console.log(oddValues);
-        console.log(evenValues);
+        // console.log("Нечетные значения");
+        // for (let oddVal of oddValues) {
+        //     console.log(oddVal);
+        // }
+
+        // console.log("Четные значения");
+        // for (let evenVal of evenValues) {
+        //     console.log(evenVal);
+        // }
+
+        evenValues = values.filter(el => (el % 2 == 0));
+        oddValues = values.filter(el => (el % 2 != 0));
+        console.log("Парні значення");
+        evenValues.forEach(el => console.log(el));
+        console.log("Непарні значення");
+        oddValues.forEach(el => console.log(el));
+
 
     </script>
 </body>
